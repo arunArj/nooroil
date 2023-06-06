@@ -1,0 +1,537 @@
+@import url('https://fonts.googleapis.com/css2?family=Almarai:wght@300;400;700;800&display=swap');
+@font-face {
+    font-family: 'helveticaregular';
+    src: url('../fonts/helvetica-webfont.woff2') format('woff2'),
+         url('../fonts/helvetica-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'helveticabold';
+    src: url('../fonts/helvetica-bold-webfont.woff2') format('woff2'),
+         url('../fonts/helvetica-bold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'helveticaoblique';
+    src: url('../fonts/helvetica-oblique-webfont.woff2') format('woff2'),
+         url('../fonts/helvetica-oblique-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'helveticalight_condensed';
+    src: url('../fonts/helvetica-condensed-light-webfont.woff2') format('woff2'),
+         url('../fonts/helvetica-condensed-light-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+a{
+	text-decoration: none;
+}
+a.recipe-link{
+	display: block; 
+	outline: none; 
+	border: none;
+	-webkit-appearance: none;
+   -moz-appearance:    none;
+   appearance:         none;
+}
+.arabic-text{
+	font-family: 'Almarai', sans-serif !important;
+	direction: rtl
+}
+body{
+	background-color: #0f408b;
+	background-image: url(../images/main-bg.jpg);
+	background-size: 96%;
+	background-repeat: no-repeat;
+	background-position: center top
+}
+h2{
+	font-family: 'helveticabold';
+	font-size: 40px;
+	color: #e9cd73;
+}
+.wrapper{
+	width: 100%;
+	height: auto;
+	margin: 0;
+	padding: 0;
+	display: block
+}
+header{
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: auto;
+	margin: 0;
+	padding: 0;
+	z-index: 100
+}
+.logo {
+    width: 140px;
+    height: auto;
+    margin: 0;
+    padding: 0;
+    display: block;
+}
+.nav-pills .nav-link.active{
+	background-color: transparent !important;
+	color: #fbe400 !important
+}
+.nav-item {
+	font-family: 'helveticaregular';
+    font-size: 15px;
+    color: #fff !important;
+    line-height: 45px;
+}
+.nav-link{
+	font-family: 'helveticaregular';
+	font-size: 15px;
+	color: #fff !important;
+	line-height: 30px
+}
+.inner-wrapper{
+	width: 100%;
+	height: auto;
+	min-height: 100vh;
+	margin: 0;
+	padding: 0;
+	float: left;
+	background-image: url(../images/bottom-moon.png), url(../images/bottom-glitter.png);
+	background-position: left bottom, right bottom;
+	background-repeat: no-repeat, no-repeat;
+}
+.oil-bottle {
+    width: 500px;
+    height: 500px;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    right: 0;
+    bottom: -30px;
+}
+.oil-bottle-02 {
+    margin-top: -100px;
+    float: right;
+    position: relative;
+    z-index: -1;
+}
+.subtitle{
+	width: 100%;
+	font-family: 'helveticabold';
+	font-size: 48px;
+	line-height: 48px;
+    font-weight: 800;
+	color: #f0d67c;
+    /*background: -webkit-linear-gradient(0deg, #f0d67c, #ab7d28, #f0d67c);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;*/
+    margin: 0;
+	position: relative
+}
+.subtitle::before {
+    content: '';
+    width: 100%;
+    height: 1px;
+    background-color: #fff;
+    position: absolute;
+    left: 0;
+    top: 25px;
+    z-index: -1;
+}
+.subtitle span {
+    background-color: #0f408b;
+    padding: 0 20px;
+    display: inline-block;
+}
+.home-description h3{
+	font-family: 'helveticabold';
+	font-size: 30px;
+	line-height: 40px;
+	color: #f0d67c
+}
+.home-description p{
+	font-family: 'helveticaregular';
+	font-size: 24px;
+	line-height: 30px;
+	color: #fff
+}
+.recipe-header{
+	height: 90vh;
+	position: relative;
+	background-color: #0f408b;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: top center;
+}
+.recipe-header .container{
+	height: 90vh;
+	position: relative
+}
+.serve-details{
+	height: 100px;
+	width: 100%;
+	padding: 10px 0;
+	background-image: linear-gradient(90deg, #f1d77d 0%, #ab7c27 50%, #f1d77d 100%);
+	box-sizing: border-box;
+	font-family: 'helveticaregular';
+	color: #fff;
+	font-size: 26px;
+	line-height: normal
+}
+.serve-details-inner{
+	background-color: #0f408b;
+}
+.custom-bg-gradient{
+	height: calc(100px - 20px);
+	background-image: linear-gradient(90deg, #0b4c98 0%, #0098d7 50%, #0b4c98 100%);
+}
+.custom-bg-gradient col-4:nth-child(odd){
+	border-left: 1px solid #fff;
+	border-right: 1px solid #fff;
+}
+.custom-bg-blue{
+	background-color: #0f408b
+}
+.custom-drop-shadow{
+	filter: drop-shadow(0px 0px 15px #00245a)
+}
+.name-plate {
+    width: 610px;
+    height: 300px;
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-size: contain;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-image: url(../images/name-plate.png);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.name-plate h1 {
+    font-family: 'helveticabold';
+    font-size: 50px;
+    line-height: 50px;
+    color: #0b4c98;
+}
+.name-plate h3{
+	font-family: 'helveticaoblique';
+	font-size: 1.5rem;
+	line-height: normal;
+	color: #000;
+	
+}
+.Lemon-Thyme-Chicken-Roast{
+	background-image: url(../images/Lemon-Thyme-Chicken-Roast.jpg);
+}
+
+.custom-icons{
+	width: 60px;
+	height: auto;
+	display: inline-block;
+	margin: 0 10px;
+	padding: 0;
+}
+.custom-icons img{
+	max-width: 100%;
+}
+.custom-style{
+	font-family: 'helveticaregular';
+	font-size: 24px;
+	color: #fff;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-top: 7px solid #f1c156;
+	border-bottom: 7px solid #f1c156;
+}
+.content-container{
+	padding-top: 75px;
+	overflow-y: hidden;
+	background-image: url(../images/bottom-moon.png), url(../images/bottom-glitter.png);
+	background-position: left bottom, right bottom;
+	background-repeat: no-repeat, no-repeat;
+}
+.ingredients-list ul{
+	align-self: flex-start;
+	-webkit-column-count: 2;
+	-moz-column-count: 2;
+	column-count: 2;
+	-webkit-column-gap: 0;
+	-moz-column-gap: 0;
+	column-gap: 75px;
+	list-style: none
+}
+.ingredients-list ul li{
+	margin: 0 0 20px 0!important;
+	padding: 0;
+	-webkit-column-break-inside: avoid;
+	page-break-inside: avoid;
+	break-inside: avoid;
+	text-align: left;
+	font-family: 'helveticaregular';
+	font-size: 26px;
+	color: #ffffff
+}
+.ingredients-list ul li::before{
+	content: "•";
+	color: #e9cd73;
+    margin-left: -1.5em;
+    margin-right: 0.5em;
+    text-align: right;
+    direction: rtl
+}
+
+.instructions-list ol{
+	list-style: none; 
+	counter-reset: li
+}
+.instructions-list ol li{
+	text-align: left;
+    font-family: 'helveticaregular';
+    font-size: 26px;
+    line-height: 32px;
+    color: #ffffff;
+    margin: 0 0 30px 0;
+    position: relative;
+    counter-increment: li;
+}
+.instructions-list ol li::before {
+    width: 32px;
+    height: 32px;
+    content: counter(li);
+    color: #fff;
+    display: inline-block;
+    margin-left: -42px;
+    margin-right: 0.5em;
+    text-align: center;
+    background-image: url(../images/list-icon.png);
+    background-position: left top;
+    background-repeat: no-repeat;
+    background-size: 30px;
+    font-size: 16px;
+    font-weight: 700;
+}
+.recipe-notes ul{
+	list-style: none
+}
+.recipe-notes ul li{
+	text-align: left;
+	font-family: 'helveticaregular';
+	font-size: 26px;
+	color: #ffffff;
+	margin: 0 0 20px 0
+}
+.recipe-notes ul li::before{
+	content: "•";
+	color: #e9cd73;
+    margin-left: -1.5em;
+    margin-right: 0.5em;
+    text-align: right;
+    direction: rtl
+}
+.card {
+    border: 10px solid rgba(255,255,255,1) !important;
+    border-radius: 20px !important;
+}
+.card-img{
+    border-radius: 10px;
+    overflow: hidden;
+}
+.card-img a{
+	display: block
+}
+.card-title {
+    font-family: 'helveticabold';
+    font-size: 1.5rem;
+    line-height: normal;
+    color: #ffffff;
+    border-radius: 10px;
+    padding: 10px;
+    text-align: center;
+    background-color: #0f408b;
+    margin-top: -35px;
+}
+.card-title a{
+	color: #fff;
+	text-decoration: none
+}
+.card-footer{
+	border: none !important;
+	background-color: transparent !important;
+	padding: 0 !important
+}
+.card-footer span {
+    width: 33.33%;
+    float: left;
+    text-align: left;
+    font-family: 'helveticabold';
+    font-size: 16px;
+    line-height: 35px;
+    color: #0f408b;
+    padding: 0 0 0 40px;
+    box-sizing: border-box;
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: left center;
+}
+.card-footer span.min{background-image: url(../images/min-icon.jpg);}
+.card-footer span.kcal{background-image: url(../images/kcal-icon.jpg);}
+.card-footer span.pers{background-image: url(../images/pers-icon.jpg);}
+
+.custom-margintop{margin-top: -80px}
+.download-pdf{
+	width: 142px;
+	height: 54px;
+	margin: 0;
+	padding: 0;
+	display: inline-block;
+	filter: drop-shadow(0px 5px 5px #002047);
+}
+.download-pdf:hover{
+	filter: drop-shadow(0px 0px 0px #002047);
+}
+#recipies{
+	padding-bottom: 150px;
+	position: relative
+}
+#recipies .col{
+	display: none
+}
+#seeMore {
+    width: 142px;
+    height: 54px;
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+    border: none;
+    outline: none;
+    opacity: 1;
+    background-image: url(../images/loadmore-button.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center top;
+	filter: drop-shadow(0px 5px 5px #002047);
+	position: absolute;
+	left: 50%;
+	bottom: 50px;
+	transform: translateX(-50%)
+}
+#seeMore:hover{
+	border: none;
+    outline: none;
+	filter: drop-shadow(0px 0px 0px #002047)
+}
+.footer-span {
+    width: 100%;
+    height: auto;
+    margin: 8px 0;
+    padding: 0 0 0 45px;
+    float: left;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: left center;
+    font-family: 'helveticabold';
+    font-size: 16px;
+    line-height: 30px;
+    color: #fff;
+}
+.footer-span.phone-number{background-image: url(../images/phone-icon.png);}
+.footer-span.email{background-image: url(../images/email-icon.png);}
+.footer-span.address{background-image: url(../images/address-icon.png);}
+
+footer{
+	width: 100%;
+    height: auto;
+    margin: 0;
+    padding: 0;
+    float: left;
+    box-shadow: 0 0 15px #000;
+    color: #ffff;
+	position: relative;
+	z-index: 100
+}
+
+@media only screen and (max-width: 1680px){
+	body{background-size: 108%}
+	.inner-wrapper, .content-container {background-size: 390px}
+}
+@media only screen and (max-width: 1440px){
+	h2{font-size: 32px}
+	body{background-size: 96%}
+	.container{width: 1024px}
+	.subtitle{font-size: 32px; line-height: 42px}
+	.home-description h3{font-size: 24px; line-height: 34px}
+	.home-description p {font-size: 18px; line-height: 24px}
+	.card-footer span {font-size: 12px; line-height: 30px; padding: 0 0 0 30px}
+	.card-title{font-size: 16px}
+	.oil-bottle {width: 400px; height: 400px}
+	.custom-style{font-size: 20px}
+	.ingredients-list ul li{font-size: 20px; margin: 0 0 10px 0!important}
+	.instructions-list ol li{font-size: 20px}
+	.recipe-notes ul li{font-size: 20px}
+	.oil-bottle-02 {width: 500px}
+	.download-pdf {width: 122px; height: 46px}
+	.inner-wrapper, .content-container {background-size: 330px}
+}
+@media only screen and (max-width: 980px){
+	.custom-margintop{margin-top: 0}
+	.name-plate{width: 420px; height: 200px}
+	.name-plate h1 {font-size: 32px; line-height: 40px}
+	.ingredients-list ul{column-count: 1}
+	.footer-logo{width: 100px}
+	.footer-span {width: auto; float: none; display: inline-block; margin: 0 20px; padding: 0 0 0 40px}
+}
+@media only screen and (max-width: 768px){
+	.logo{width: 75px;}
+	.container{width: 90%}
+	.home-description h3 {font-size: 20px; line-height: 26px}
+	.home-description p {font-size: 13px; line-height: 18px}
+	.subtitle {font-size: 26px;line-height: normal;}
+	.inner-wrapper, .content-container {background-size: 170px}
+	
+}
+@media only screen and (max-width: 576px){
+	.logo{width: 75px;}
+	.content-container{padding-top: 50px}
+	.custom-bg-gradient{height: auto}
+	.name-plate {width: 250px; height: auto; padding: 20px 0 10px 0}
+	.name-plate h1 {font-size: 16px; line-height: 20px}
+	.name-plate h3 {font-size: 14px}
+	.custom-icons{width: 100px; margin: 0; padding: 10px 0 0 0}
+	.custom-style {font-size: 16px}
+	.custom-icons img{width: 36px}
+	.ingredients-list ul li {font-size: 16px; margin: 0 0 10px 0!important}
+	.instructions-list ol li {font-size: 16px}
+	.instructions-list ol li::before{font-size: 16px}
+	.recipe-notes ul li {font-size: 16px; margin: 0 0 10px 0}
+	.oil-bottle-02 {margin-top: 0}
+	h2 {font-size: 26px}
+	
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
