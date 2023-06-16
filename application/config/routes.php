@@ -55,5 +55,6 @@ $route['en'] = 'home/en';
 $route['ar/(.*)'] = 'home/recipe_ar/$1';
 $route['en/(.*)'] = 'home/recipe/$1';
 $route['admin'] = 'auth/login';
+$route['admin/login']['post'] = 'auth/login';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;

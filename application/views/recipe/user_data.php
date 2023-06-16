@@ -54,29 +54,7 @@
   </div>
   <!-- /.content-wrapper -->
 
-<!-- remove brand modal -->
-<div class="modal fade" tabindex="-1" role="dialog" id="removeModal">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title">Remove Order</h4>
-      </div>
 
-      <form role="form" action="<?php echo base_url('participants/remove') ?>" method="post" id="removeForm">
-        <div class="modal-body">
-          <p>Do you really want to remove?</p>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-          <button type="submit" class="btn btn-primary">Save changes</button>
-        </div>
-      </form>
-
-
-    </div><!-- /.modal-content -->
-  </div><!-- /.modal-dialog -->
-</div><!-- /.modal -->
 
 
 
@@ -113,48 +91,7 @@
           manageTable.draw();
        });
   });
-function removeFunc(id)
-{
-  if(id) {
-    $("#removeForm").on('submit', function() {
 
-      var form = $(this);
-
-      // remove the text-danger
-      $(".text-danger").remove();
-
-      $.ajax({
-        url: form.attr('action'),
-        type: form.attr('method'),
-        data: { parti_id:id }, 
-        dataType: 'json',
-        success:function(response) {
-
-          manageTable.ajax.reload(null, false); 
-
-          if(response.success === true) {
-            $("#messages").html('<div class="alert alert-success alert-dismissible" role="alert">'+
-              '<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>'+
-              '<strong> <span class="glyphicon glyphicon-ok-sign"></span> </strong>'+response.messages+
-            '</div>');
-
-            // hide the modal
-            $("#removeModal").modal('hide');
-
-          } else {
-
-            $("#messages").html('<div class="alert alert-warning alert-dismissible" role="alert">'+
-              '<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>'+
-              '<strong> <span class="glyphicon glyphicon-exclamation-sign"></span> </strong>'+response.messages+
-            '</div>'); 
-          }
-        }
-      }); 
-
-      return false;
-    });
-  }
-}
 
 
 </script> 

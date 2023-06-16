@@ -75,11 +75,11 @@
   <footer class="py-5">
     <div class="container" id="footers">
       <div class="row">
-        <div class="col-12 col-lg-9 px-lg-5 text-center text-lg-start"><span class="d-block mb-3"><img src="<?php echo base_url('assets/front/images/footer-logo.jpg'); ?>" alt="" class="footer-logo"></span>
-          <p>Sign up now and stay updated with new tips from Noor</p>
+        <div class="col-12 px-lg-5 text-center"><span class="d-block mb-3"><img src="<?php echo base_url('assets/front/images/footer-logo.jpg'); ?>" alt="" class="footer-logo"></span>
+          <p class="d-none">Sign up now and stay updated with new tips from Noor</p>
           <!--<form  action="<?php //echo base_url('home/createUser') ?>" id="myform" method="post" enctype="multipart/form-data">-->
              <?php  echo form_open('home/createUser', 'class="email" id="myform" method="post" enctype="multipart/form-data"');?>
-              <div class="row g-3">
+              <div class="row g-3 d-none">
               	<div class="col-sm-6">
               		<label for="name" class="form-label">Name</label>
               		<input type="text" class="form-control" name="name" id="name">
@@ -124,10 +124,10 @@
           </div>
         <?php endif; ?>
         </div>
-        <div class="col-12 col-lg-3 text-center text-lg-start mt-5 mt-lg-0"> 
-<span class="footer-span instagram"><a href="https://www.instagram.com/NOORArabiaOfficial" target="_blank">NOORArabiaOfficial</a></span>
-<span class="footer-span facebook"><a href="https://www.facebook.com/noorarabiaofficial/?__nodl&refsrc=deprecated&ref=external%3Awww.google.com&_rdr" target="_blank">MYClubNOOR</a></span>
-<span class="footer-span youtube"><a href="https://www.youtube.com/@NOORArabia" target="_blank">NOORArabiaOfficial</a></span>
+        <div class="col-12 text-center mt-5 mt-lg-0"> 
+<span class="footer-span text-start instagram"><a href="https://www.instagram.com/NOORArabiaOfficial" target="_blank">NOORArabiaOfficial</a></span>
+<span class="footer-span text-start facebook"><a href="https://www.facebook.com/noorarabiaofficial/?__nodl&refsrc=deprecated&ref=external%3Awww.google.com&_rdr" target="_blank">MYClubNOOR</a></span>
+<span class="footer-span text-start youtube"><a href="https://www.youtube.com/@NOORArabia" target="_blank">NOORArabiaOfficial</a></span>
       </div>
     </div>
   </footer>

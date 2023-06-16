@@ -542,11 +542,11 @@ header{
 	filter: drop-shadow(0px 0px 0px #002047)
 }
 .footer-span {
-    width: 100%;
+    width: auto;
     height: auto;
-    margin: 8px 0;
-    padding: 0 45px 0 0;
-    float: left;
+    margin: 10px;
+    padding: 0 40px 0 0;
+    display: inline-block;
     background-size: contain;
     background-repeat: no-repeat;
     background-position: right center;

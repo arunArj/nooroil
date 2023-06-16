@@ -16,7 +16,12 @@
       <!-- Small boxes (Stat box) -->
       <div class="row">
         <div class="col-md-12 col-xs-12">
-          <div id="messages"></div>
+          <div id="messages" style="display:none">
+              <div class="alert alert-success alert-dismissible" id="msgwrap" role="alert">
+              <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+              <strong> <span class="glyphicon glyphicon-ok-sign"></span> </strong><span id="msgDiv"></span>
+            </div>
+          </div>
           <?php if($this->session->flashdata('success')): ?>
             <div class="alert alert-success alert-dismissible" role="alert">
               <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
@@ -103,6 +108,7 @@
   var base_url = "<?php echo base_url(); ?>";
   
   $(document).ready(function() {
+  
     $("#mainRecipeNav").addClass('active');
 
     manageTable = $('#manageTable').DataTable({
@@ -113,10 +119,22 @@
               url :  base_url + 'recipe/fetchRecord/',
               type : 'POST',
               'data': function(data){
+                  data.<?php echo $this->security->get_csrf_token_name(); ?> = '<?php echo $this->security->get_csrf_hash(); ?>'
                data.searchlaguage = $('#FilterLangauge').val();
             }
             },
+        "beforeSend": function(xhr) {
+            xhr.setRequestHeader('<?php echo $this->security->get_csrf_token_name(); ?>','<?php echo $this->security->get_csrf_hash(); ?>');
+        }
         });
+        manageTable.on('xhr.dt', function(e, settings, json) {
+ 
+        settings.ajax.data =  function(data){
+                  data.<?php echo $this->security->get_csrf_token_name(); ?> = '<?php echo $this->security->get_csrf_hash(); ?>'
+               data.searchlaguage = $('#FilterLangauge').val();
+            }
+          
+    });
         $('#FilterLangauge').change(function(){
           manageTable.draw();
        });
@@ -141,21 +159,20 @@ function removeFunc(id)
           manageTable.ajax.reload(null, false); 
 
           if(response.success === true) {
-            $("#messages").html('<div class="alert alert-success alert-dismissible" role="alert">'+
-              '<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>'+
-              '<strong> <span class="glyphicon glyphicon-ok-sign"></span> </strong>'+response.messages+
-            '</div>');
+          
+            $("#msgwrap").removeClass('alert-warning').addClass('alert-success');
 
-            // hide the modal
+            $('.glyphicon').removeClass('glyphicon-exclamation-sign').addClass('glyphicon-ok-sign');
+            
             $("#removeModal").modal('hide');
 
           } else {
+                $("#msgwrap").removeClass('alert-success').addClass('alert-warning');
 
-            $("#messages").html('<div class="alert alert-warning alert-dismissible" role="alert">'+
-              '<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>'+
-              '<strong> <span class="glyphicon glyphicon-exclamation-sign"></span> </strong>'+response.messages+
-            '</div>'); 
+            $('.glyphicon').removeClass('glyphicon-ok-sign').addClass('glyphicon-exclamation-sign');
           }
+            $("#msgDiv").text(response.messages);
+              $("#messages").show();
         }
       }); 
 

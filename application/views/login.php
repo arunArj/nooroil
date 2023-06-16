@@ -44,8 +44,9 @@
     <?php if(!empty($errors)) {
       echo $errors;
     } ?>
-
-    <form action="<?php echo base_url('auth/login') ?>" method="post">
+    <?php
+        $attributes = array('id' => 'myform');
+        echo form_open('admin/login',$attributes); ?>
       <div class="form-group has-feedback">
         <input type="text" class="form-control" name="username" id="username" placeholder="User Name" autocomplete="off">
         <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
@@ -68,7 +69,7 @@
         </div>
         <!-- /.col -->
       </div>
-    </form>
+    <?php echo form_close();?>
 
   </div>
   <!-- /.login-box-body -->
